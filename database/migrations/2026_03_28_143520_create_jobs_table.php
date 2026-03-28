@@ -9,10 +9,15 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
+            $table->string('company_name');
+            $table->string('job_title');
+            $table->text('description')->nullable();
+            $table->boolean('minimum_wage_compliant')->default(true);
+            $table->boolean('accessible_workplace')->default(true);
             $table->timestamps();
         });
     }

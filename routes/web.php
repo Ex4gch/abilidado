@@ -17,6 +17,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/profile', [ProfileController::class, 'index'])->middleware(['auth']);
+Route::post('/verify-pwd', [ProfileController::class, 'verifyPwd'])->middleware('auth');
+
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\ApplicationController;
 

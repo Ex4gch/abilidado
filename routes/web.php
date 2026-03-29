@@ -17,4 +17,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\ApplicationController;
+
+Route::get('/jobs', [JobController::class, 'index']);
+Route::get('/jobs/{id}', [JobController::class, 'show']);
+Route::post('/apply/{id}', [ApplicationController::class, 'apply']);
+Route::get('/applications', [ApplicationController::class, 'index']);
+
 require __DIR__.'/auth.php';

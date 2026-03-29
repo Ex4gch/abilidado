@@ -10,7 +10,7 @@
     <style> body { font-family: 'Inter', sans-serif; } </style>
 </head>
 
-<body class="bg-gray-50 antialiased text-gray-900 min-h-screen flex flex-col">
+<body class="bg-gray-100 antialiased text-gray-900 min-h-screen flex flex-col">
 
     <nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

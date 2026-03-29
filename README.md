@@ -63,3 +63,19 @@ Password: password
 
 Notes: Has access to the Dual-Interface Search and can submit applications.
 
+
+<img width="1365" height="717" alt="image" src="https://github.com/user-attachments/assets/22fef958-eb19-49f6-a1be-1d582085c414" />
+<img width="1365" height="718" alt="image" src="https://github.com/user-attachments/assets/912dc284-a649-4f80-82ff-6dc642004e93" />
+<img width="1365" height="718" alt="image" src="https://github.com/user-attachments/assets/1d2397c2-bda5-455a-bc44-83309ef00067" />
+<img width="1365" height="716" alt="image" src="https://github.com/user-attachments/assets/b9848e05-7acc-4cc8-a6fa-dae2c6b5da67" />
+<img width="1365" height="716" alt="image" src="https://github.com/user-attachments/assets/05e5b34e-94e3-4956-ae77-142b16a0df78" />
+<img width="1365" height="722" alt="image" src="https://github.com/user-attachments/assets/ba35585b-46a7-496c-88ec-bb9ee83aa0a0" />
+<img width="1364" height="720" alt="image" src="https://github.com/user-attachments/assets/9b6507ad-5ece-4565-b9ca-bf26c894ec12" />
+
+
+
+
+
+
+
+

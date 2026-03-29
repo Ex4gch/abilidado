@@ -18,7 +18,14 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
+        $user = auth()->user();
+
+        // If it's an employer, load the new employer profile view
+        if ($user->role === 'employer') {
+            return view('employer.profile', compact('user'));
+        }
+
+        // Otherwise, load the standard job seeker profile (with the OCR scanner)
         return view('profile.index', compact('user'));
     }
 

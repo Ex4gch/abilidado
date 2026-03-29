@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abilidado Cebu</title>
+    <title>@yield('title', 'Abilidado Cebu')</title>
     @vite('resources/css/app.css')
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700&display=swap" rel="stylesheet" />
@@ -23,12 +23,21 @@
                 </div>
 
                 <div class="hidden md:flex space-x-8">
-                    <a href="/jobs" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-900 hover:border-blue-500 transition-all duration-200">
-                        Jobs
-                    </a>
-                    <a href="/applications" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-900 hover:border-blue-500 transition-all duration-200">
-                        Applications
-                    </a>
+                    @if(auth()->check() && auth()->user()->role === 'employer')
+                        <a href="/employer/dashboard" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-900 hover:border-blue-500 transition-all duration-200">
+                            Employer Dashboard
+                        </a>
+                        <a href="/employer/applicants" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-900 hover:border-blue-500 transition-all duration-200">
+                            Review Applicants
+                        </a>
+                    @else
+                        <a href="/jobs" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-900 hover:border-blue-500 transition-all duration-200">
+                            Jobs
+                        </a>
+                        <a href="/applications" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-900 hover:border-blue-500 transition-all duration-200">
+                            Applications
+                        </a>
+                    @endif
                 </div>
 
                 <div class="flex items-center space-x-6">

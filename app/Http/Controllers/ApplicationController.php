@@ -10,6 +10,18 @@ use Illuminate\Support\Facades\Auth;
 
 class ApplicationController extends Controller
 {
+
+    public function index()
+    {
+        $applications = Application::with(['job.employer'])
+            ->where('user_id', Auth::id())
+            ->get();
+
+        // REMOVE THIS after testing. It will stop the page and show you the data.
+        // dd($applications); 
+
+        return view('applications.index', compact('applications'));
+    }
     //
     public function apply($id)
     {
